@@ -19,7 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="GUI\" />
+    <Folder Include="GUI\GeneralManager\" />
+    <Folder Include="GUI\Admin\" />
   </ItemGroup>
 
 </Project>

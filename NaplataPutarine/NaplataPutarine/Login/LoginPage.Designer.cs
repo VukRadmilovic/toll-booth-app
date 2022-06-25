@@ -75,7 +75,7 @@
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(94, 29);
             this.loginButton.TabIndex = 4;
-            this.loginButton.Text = "Uloguj se";
+            this.loginButton.Text = "Prijava";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
@@ -100,7 +100,7 @@
             this.Controls.Add(this.emailLabel);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Logovanje";
+            this.Text = "Prijava";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginPage_FormClosing);
             this.Load += new System.EventHandler(this.LoginPage_Load);
             this.ResumeLayout(false);
