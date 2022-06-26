@@ -5,7 +5,7 @@ namespace NaplataPutarine.Core.Database
 {
     public class DatabaseConnection
     {
-        public SqlConnection database { get; }
+        public SqlConnection Database { get; }
         private static DatabaseConnection? singletonInstance;
 
         private DatabaseConnection()
@@ -16,7 +16,7 @@ namespace NaplataPutarine.Core.Database
             credentials.Password = "pnKeAFeV6z7zmq5";
             credentials.InitialCatalog = "sims-db";
 
-            database = new SqlConnection(credentials.ConnectionString);
+            Database = new SqlConnection(credentials.ConnectionString);
         }
 
         public static DatabaseConnection GetInstance()
@@ -30,7 +30,7 @@ namespace NaplataPutarine.Core.Database
 
         private SqlCommand CreateCommand(string query, params (string, object)[] commandParameters)
         {
-            SqlCommand command = database.CreateCommand();
+            SqlCommand command = Database.CreateCommand();
             command.CommandText = query;
             command.CommandType = CommandType.Text;
             foreach ((string, object) parameter in commandParameters)
@@ -44,7 +44,7 @@ namespace NaplataPutarine.Core.Database
         {
             try
             {
-                database.Open();
+                Database.Open();
                 SqlCommand command = CreateCommand(query, commandParameters);
                 command.ExecuteNonQuery();
             }
@@ -54,7 +54,7 @@ namespace NaplataPutarine.Core.Database
             }
             finally
             {
-                database.Close();
+                Database.Close();
             }
         }
 
@@ -64,7 +64,7 @@ namespace NaplataPutarine.Core.Database
             object? value = null;
             try
             {
-                database.Open();
+                Database.Open();
                 SqlCommand command = CreateCommand(query, commandParameters);
                 value = command.ExecuteScalar();
             }
@@ -74,7 +74,7 @@ namespace NaplataPutarine.Core.Database
             }
             finally
             {
-                database.Close();
+                Database.Close();
             }
             return value;
         }
@@ -102,7 +102,7 @@ namespace NaplataPutarine.Core.Database
             List<object> retrieved = new List<object>();
             try
             {
-                database.Open();
+                Database.Open();
                 SqlCommand command = CreateCommand(query, commandParameters);
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -123,7 +123,7 @@ namespace NaplataPutarine.Core.Database
             }
             finally
             {
-                database.Close();
+                Database.Close();
             }
             return retrieved;
         }

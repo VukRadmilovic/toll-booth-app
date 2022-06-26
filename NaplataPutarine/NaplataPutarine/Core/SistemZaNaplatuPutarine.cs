@@ -1,7 +1,7 @@
-﻿using NaplataPutarine.Payments.Models;
-using NaplataPutarine.Prices.Models;
-using NaplataPutarine.TollStations.Models;
-using NaplataPutarine.Users.Models;
+﻿using NaplataPutarine.Core.Payments.Models;
+using NaplataPutarine.Core.Prices.Models;
+using NaplataPutarine.Core.TollStations.Models;
+using NaplataPutarine.Core.Users.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,25 +12,25 @@ namespace NaplataPutarine.Core
 {
     internal class SistemZaNaplatuPutarine
     {
-        public List<Korisnik> korisnici { get; private set; }
-        public List<Uplata> uplate { get; private set; }
-        public List<Tag> tagovi { get; private set; }
-        public List<NaplatnaStanica> naplatneStanice { get; private set; }
-        public List<Deonica> deonice { get; private set; }
-        public Cenovnik cenovnik { get; private set; }
-        public List<Kartica> kartice { get; private set; }
+        public List<Korisnik> Korisnici { get; private set; }
+        public List<Uplata> Uplate { get; private set; }
+        public List<Tag> Tagovi { get; private set; }
+        public List<NaplatnaStanica> NaplatneStanice { get; private set; }
+        public List<Deonica> Deonice { get; private set; }
+        public Cenovnik Cenovnik { get; private set; }
+        public List<Kartica> Kartice { get; private set; }
 
-        public string generisiIzvestaj(string type)
+        public string GenerisiIzvestaj(string type)
         {
             throw new NotImplementedException();
         }
 
-        public NaplatnaStanica registrujNaplatnuStanicu()
+        public NaplatnaStanica RegistrujNaplatnuStanicu()
         {
             throw new NotImplementedException();
         }
 
-        public Deonica getDeonica(NaplatnaStanica start, NaplatnaStanica kraj)
+        public Deonica GetDeonica(NaplatnaStanica start, NaplatnaStanica kraj)
         {
             throw new NotImplementedException();
         }

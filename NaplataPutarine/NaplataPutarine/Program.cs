@@ -1,3 +1,5 @@
+using NaplataPutarine.Login;
+
 namespace NaplataPutarine
 {
     internal static class Program
