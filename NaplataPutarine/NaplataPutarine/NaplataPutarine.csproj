@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="GUI\GeneralManager\" />
     <Folder Include="GUI\Admin\" />
+    <Folder Include="Users\Repositories\" />
   </ItemGroup>
 
 </Project>

@@ -34,7 +34,7 @@ namespace NaplataPutarine.Payments.Models
             this.valuta = valuta;
             this.trenutnoStanje = trenutnoStanje;
             this.vlasnik = vlasnik;
-            this.kategorijaVozila = kategorija;
+            kategorijaVozila = kategorija;
             this.poslednjaStanica = poslednjaStanica;
         }
     }
