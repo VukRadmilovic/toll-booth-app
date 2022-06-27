@@ -6,11 +6,11 @@ namespace NaplataPutarine.Login
 {
     public partial class LoginPage : Form
     {
-        private readonly LoginController loginController;
+        private readonly LoginController _loginController;
         public LoginPage()
         {
             InitializeComponent();
-            loginController = new LoginController();
+            _loginController = new LoginController();
         }
 
         private void LoginButton_Click(object sender, EventArgs e) => TryLogin(usernameField.Text.Trim(),passwordField.Text.Trim());
@@ -21,17 +21,14 @@ namespace NaplataPutarine.Login
         {
             try
             {
-                string error_message = loginController.ValidateLoginCredentials(email, password);
-
-                if (error_message != null)
-                {
-                    MessageBoxUtilities.ShowErrorMessage(error_message);
-                    return;
-                }
-                loginController.Login(email, password);
+                _loginController.Login(email, password);
                 Hide();
             }
             catch (DatabaseConnectionException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+            catch(InvalidInputException error)
             {
                 MessageBox.Show(error.Message);
             }

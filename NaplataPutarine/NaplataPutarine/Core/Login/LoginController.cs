@@ -10,18 +10,18 @@ namespace NaplataPutarine.Core.Login
 {
     internal class LoginController
     {
-        private readonly LoginService loginService;
+        private readonly LoginService _loginService;
         
         public LoginController()
         {
-            loginService = new LoginService();
+            _loginService = new LoginService();
         }
 
-        public string? ValidateLoginCredentials(string email, string password)
+        public string? ValidateLoginCredentials(string username, string password)
         {
             string error_message = null;
 
-            if (string.IsNullOrEmpty(email))
+            if (string.IsNullOrEmpty(username))
             {
                 error_message = "Korisničko ime nije uneto!";
             }
@@ -32,15 +32,15 @@ namespace NaplataPutarine.Core.Login
                 error_message = "Lozinka nije uneta!";
             }
 
-            /*else if (userService.GetByEmail(email) == null)
+            else if (_loginService.GetByKorisnickoIme(username) == null)
             {
-                error_message = "There is no user with specified email!";
+                error_message = "Ne postoji korisnik sa unetim korisničkim imenom!";
             }
 
-            else if (!userService.GetByEmail(email).password.Equals(password))
+            else if (!_loginService.GetByKorisnickoIme(username).Nalog.Lozinka.Equals(password))
             {
-                error_message = "Password does not match email!";
-            }*/
+                error_message = "Lozinka neispravna!";
+            }
 
             return error_message;
 
@@ -48,7 +48,12 @@ namespace NaplataPutarine.Core.Login
 
         public void Login(string email, string password)
         {
-            loginService.Login(email, password);
+            string errorMessage = ValidateLoginCredentials(email, password);
+            if (errorMessage != null)
+            {
+                throw new InvalidInputException(errorMessage);
+            }
+            _loginService.Login(email, password);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace NaplataPutarine.Core.Users.Models
             MestoRada = mestoRada;
         }
 
-        public NaplatnaStanica MestoRada { get; set; }
+        public NaplatnaStanica? MestoRada { get; set; }
 
 
     }

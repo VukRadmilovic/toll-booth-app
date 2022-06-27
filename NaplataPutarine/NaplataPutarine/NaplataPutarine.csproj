@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Core\Users\Repositories\**" />
+    <EmbeddedResource Remove="Core\Users\Repositories\**" />
+    <None Remove="Core\Users\Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
@@ -21,7 +27,6 @@
   <ItemGroup>
     <Folder Include="GUI\GeneralManager\" />
     <Folder Include="GUI\Admin\" />
-    <Folder Include="Core\Users\Repositories\" />
   </ItemGroup>
 
 </Project>

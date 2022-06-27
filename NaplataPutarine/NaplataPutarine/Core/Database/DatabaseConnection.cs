@@ -97,9 +97,9 @@ namespace NaplataPutarine.Core.Database
         }
 
 
-        public List<object> ExecuteSelectCommand(string query, params (string, object)[] commandParameters)
+        public List<object[]> ExecuteSelectCommand(string query, params (string, object)[] commandParameters)
         {
-            List<object> retrieved = new List<object>();
+            List<object[]> retrieved = new List<object[]>();
             try
             {
                 Database.Open();

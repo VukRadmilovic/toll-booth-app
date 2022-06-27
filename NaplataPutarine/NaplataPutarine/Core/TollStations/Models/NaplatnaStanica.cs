@@ -34,6 +34,12 @@ namespace NaplataPutarine.Core.TollStations.Models
             NaplatnaMesta = naplatnaMesta;
         }
 
+        public NaplatnaStanica(int id, string naziv)
+        {
+            Id = id;
+            Naziv = naziv;
+        }
+
         public NaplatnoMesto RegistrujNaplatnoMesto()
         {
             throw new NotImplementedException();

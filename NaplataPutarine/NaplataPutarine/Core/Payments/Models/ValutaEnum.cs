@@ -10,9 +10,14 @@ namespace NaplataPutarine.Core.Payments.Models
     {
         public enum Valuta
         {
-            DIN,
+            RSD,
             EUR,
             USD
+        }
+
+        public static Valuta Parse(string literal)
+        {
+            return (Valuta)Enum.Parse(typeof(Valuta), literal);
         }
     }
 }

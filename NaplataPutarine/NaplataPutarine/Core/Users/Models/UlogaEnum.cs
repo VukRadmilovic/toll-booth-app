@@ -15,5 +15,10 @@ namespace NaplataPutarine.Core.Users.Models
             RADNIK_MESTA,
             ADMINISTRATOR
         };
+
+        public static Uloga Parse(string literal)
+        {
+            return (Uloga)Enum.Parse(typeof(Uloga), literal);
+        }
     }
 }
