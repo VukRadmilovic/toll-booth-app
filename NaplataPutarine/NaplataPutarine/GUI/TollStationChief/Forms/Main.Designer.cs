@@ -42,6 +42,7 @@
             this.deviceStateButton.TabIndex = 0;
             this.deviceStateButton.Text = "Pregled stanja uređaja";
             this.deviceStateButton.UseVisualStyleBackColor = true;
+            this.deviceStateButton.Click += new System.EventHandler(this.DeviceStateButton_Click);
             // 
             // reportButton
             // 

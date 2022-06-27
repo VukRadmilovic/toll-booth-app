@@ -1,6 +1,8 @@
-﻿using NaplataPutarine.Core.Payments.Models;
+﻿using NaplataPutarine.Core.Devices;
+using NaplataPutarine.Core.Payments.Models;
 using NaplataPutarine.Core.Prices.Models;
 using NaplataPutarine.Core.TollStations.Models;
+using NaplataPutarine.Core.TollStations.Repositories;
 using NaplataPutarine.Core.Users;
 using NaplataPutarine.Core.Users.Models;
 using System;
@@ -23,6 +25,7 @@ namespace NaplataPutarine.Core
         public List<Kartica> Kartice { get; private set; }
 
         private readonly KorisnikRepository _korisnikRepo;
+        private readonly NaplatnaStanicaRepository _stanicaRepo;
         private static SistemZaNaplatuPutarine? instance;
 
         public static SistemZaNaplatuPutarine GetInstance()
@@ -37,7 +40,9 @@ namespace NaplataPutarine.Core
         private SistemZaNaplatuPutarine()
         {
             _korisnikRepo = new KorisnikRepository();
-            Radnici = _korisnikRepo.GetRadnici();
+            _stanicaRepo = new NaplatnaStanicaRepository();
+            Radnici = _korisnikRepo.GetAllWorkers();
+            NaplatneStanice = _stanicaRepo.GetAllTollStations();
         }
         
         public string GenerisiIzvestaj(string type)

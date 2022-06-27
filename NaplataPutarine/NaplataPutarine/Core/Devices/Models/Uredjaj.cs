@@ -9,6 +9,7 @@ namespace NaplataPutarine.Core.Devices.Models
 {
     internal abstract class Uredjaj
     {
+        
         public int Id { get; set; }
         public bool Ispravan { get; set; }
         public NaplatnoMesto NaplatnoMestoUredjaja { get; set; }
@@ -20,10 +21,5 @@ namespace NaplataPutarine.Core.Devices.Models
             NaplatnoMestoUredjaja = mesto;
         }
 
-
-        public void izmeniStanjeIspravnosti(bool ispravnost)
-        {
-            Ispravan = ispravnost;
-        }
     }
 }

@@ -14,8 +14,8 @@ namespace NaplataPutarine.Core.TollStations.Models
         public string Mesto { get; set; }
         public DateOnly DatumIzgradnje { get; set; }
         public Radnik SefStanice { get; set; }
-        List<Radnik> Radnici { get; set; }
-        List<NaplatnoMesto> NaplatnaMesta { get; set; }
+        public List<Radnik> Radnici { get; set; }
+        public List<NaplatnoMesto> NaplatnaMesta { get; set; }
 
         public NaplatnaStanica(int id,
                                string naziv,
@@ -32,6 +32,11 @@ namespace NaplataPutarine.Core.TollStations.Models
             SefStanice = sefStanice;
             Radnici = radnici;
             NaplatnaMesta = naplatnaMesta;
+        }
+
+        public NaplatnaStanica(int id)
+        {
+            Id = id;
         }
 
         public NaplatnaStanica(int id, string naziv)

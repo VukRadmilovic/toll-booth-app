@@ -10,8 +10,14 @@
 
   <ItemGroup>
     <Compile Remove="Core\Users\Repositories\**" />
+    <Compile Remove="GUI\Admin\**" />
+    <Compile Remove="GUI\GeneralManager\**" />
     <EmbeddedResource Remove="Core\Users\Repositories\**" />
+    <EmbeddedResource Remove="GUI\Admin\**" />
+    <EmbeddedResource Remove="GUI\GeneralManager\**" />
     <None Remove="Core\Users\Repositories\**" />
+    <None Remove="GUI\Admin\**" />
+    <None Remove="GUI\GeneralManager\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,11 +28,6 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="GUI\GeneralManager\" />
-    <Folder Include="GUI\Admin\" />
   </ItemGroup>
 
 </Project>

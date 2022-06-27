@@ -8,5 +8,10 @@
             if (result == DialogResult.Yes) return true;
             return false;
         }
+
+        public static object GetCellValue(DataGridView table, string columnName)
+        {
+            return table.SelectedRows[0].Cells[columnName].Value;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using NaplataPutarine.Core.Users.Models;
+using NaplataPutarine.GUI.TollStationChief.Forms;
 using NaplataPutarine.Login;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,11 @@ namespace NaplataPutarine.GUI.TollStationChief
 {
     internal partial class Main : Form
     {
+        private readonly Radnik _logged;
         public Main(Radnik logged)
         {
             InitializeComponent();
+            _logged = logged;
             stationInfo.Text = logged.MestoRada.Naziv + " ( ID: " + logged.MestoRada.Id + ")";
         }
 
@@ -29,6 +32,11 @@ namespace NaplataPutarine.GUI.TollStationChief
         {
             Hide();
             new LoginPage().Show();
+        }
+
+        private void DeviceStateButton_Click(object sender, EventArgs e)
+        {
+            new DeviceStates(_logged.MestoRada).Show();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace NaplataPutarine.Core.Users
 {
     internal class KorisnikRepository : Repository
     {
-        public List<Radnik> GetRadnici()
+        public List<Radnik> GetAllWorkers()
         {
             List<Radnik> workers = new List<Radnik>();
             string getQuery = "SELECT [Korisnik].*, [KorisnickiNalog].*,[KorisnikTip].Ime AS ImeUloge, ISNULL([NaplatnaStanica].Id, -1) AS NSId, [NaplatnaStanica].Naziv " +
