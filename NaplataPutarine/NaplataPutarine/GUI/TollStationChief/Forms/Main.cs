@@ -38,5 +38,10 @@ namespace NaplataPutarine.GUI.TollStationChief
         {
             new DeviceStates(_logged.MestoRada).Show();
         }
+
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+            new EarningsReport(_logged.MestoRada).Show(); 
+        }
     }
 }

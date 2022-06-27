@@ -10,7 +10,7 @@ namespace NaplataPutarine.Core.Payments.Models
     internal abstract class Uplata
     {
         public int Id { get; set; }
-        public DateOnly DatumIzgradnje { get; set; }
+        public DateOnly DatumUplate { get; set; }
         public double Iznos { get; set; }
         public ValutaEnum.Valuta Valuta { get; set; }
         public NaplatnoMesto MestoUplate { get; set; }
@@ -18,7 +18,7 @@ namespace NaplataPutarine.Core.Payments.Models
         protected Uplata(int id, DateOnly datumIzgradnje, double iznos, ValutaEnum.Valuta valuta, NaplatnoMesto mestoUplate)
         {
             Id = id;
-            DatumIzgradnje = datumIzgradnje;
+            DatumUplate = datumIzgradnje;
             Iznos = iznos;
             Valuta = valuta;
             MestoUplate = mestoUplate;

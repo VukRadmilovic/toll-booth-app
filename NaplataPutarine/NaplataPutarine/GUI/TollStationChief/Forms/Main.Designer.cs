@@ -52,6 +52,7 @@
             this.reportButton.TabIndex = 1;
             this.reportButton.Text = "Izveštaj o prihodima stanice";
             this.reportButton.UseVisualStyleBackColor = true;
+            this.reportButton.Click += new System.EventHandler(this.ReportButton_Click);
             // 
             // button1
             // 

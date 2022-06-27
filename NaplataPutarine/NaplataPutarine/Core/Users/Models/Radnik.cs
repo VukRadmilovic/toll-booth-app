@@ -9,6 +9,10 @@ namespace NaplataPutarine.Core.Users.Models
 {
     internal class Radnik : Korisnik
     {
+        public Radnik(int id) : base(id)
+        {
+        }
+
         public Radnik(int id,
                       string ime,
                       string prezime,
@@ -17,6 +21,8 @@ namespace NaplataPutarine.Core.Users.Models
         {
             MestoRada = mestoRada;
         }
+
+
 
         public NaplatnaStanica? MestoRada { get; set; }
 

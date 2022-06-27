@@ -20,5 +20,10 @@ namespace NaplataPutarine.Core.Users.Models
             Prezime = prezime;
             Nalog = nalog;
         }
+
+        public Korisnik(int id)
+        {
+            Id = id;
+        }
     }
 }

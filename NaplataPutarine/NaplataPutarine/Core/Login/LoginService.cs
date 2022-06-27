@@ -1,5 +1,4 @@
 ﻿using NaplataPutarine.Core.Users.Models;
-using NaplataPutarine.GUI.TollStationChief;
 
 namespace NaplataPutarine.Core.Login
 {
@@ -17,7 +16,9 @@ namespace NaplataPutarine.Core.Login
             switch(logged.Nalog.Uloga)
             {
                 case UlogaEnum.Uloga.SEF_STANICE:
-                    new Main(logged).Show();break;
+                    new GUI.TollStationChief.Main(logged).Show();break;
+                case UlogaEnum.Uloga.MENADZER:
+                    new GUI.GeneralManager.Main().Show();break;
             }
         }
 

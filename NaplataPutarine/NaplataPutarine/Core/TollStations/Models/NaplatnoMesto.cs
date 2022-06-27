@@ -20,6 +20,11 @@ namespace NaplataPutarine.Core.TollStations.Models
             Uredjaji = uredjaji;
         }
 
+        public NaplatnoMesto(int id)
+        {
+            Id = id;
+        }
+
         public void PrijaviKvarNaUredjaju(Uredjaj uredjaj)
         {
 

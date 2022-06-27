@@ -11,13 +11,10 @@
   <ItemGroup>
     <Compile Remove="Core\Users\Repositories\**" />
     <Compile Remove="GUI\Admin\**" />
-    <Compile Remove="GUI\GeneralManager\**" />
     <EmbeddedResource Remove="Core\Users\Repositories\**" />
     <EmbeddedResource Remove="GUI\Admin\**" />
-    <EmbeddedResource Remove="GUI\GeneralManager\**" />
     <None Remove="Core\Users\Repositories\**" />
     <None Remove="GUI\Admin\**" />
-    <None Remove="GUI\GeneralManager\**" />
   </ItemGroup>
 
   <ItemGroup>

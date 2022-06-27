@@ -37,5 +37,10 @@ namespace NaplataPutarine.Core.Payments.Models
             KategorijaVozila = kategorija;
             PoslednjaStanica = poslednjaStanica;
         }
+
+        public Tag(int id)
+        {
+            Id = id;
+        }
     }
 }
