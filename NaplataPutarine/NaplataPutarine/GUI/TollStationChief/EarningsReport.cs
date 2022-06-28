@@ -1,6 +1,6 @@
 ﻿using NaplataPutarine.Core;
+using NaplataPutarine.Core.TollStations;
 using NaplataPutarine.Core.TollStations.Models;
-using NaplataPutarine.GUI.TollStationChief.Controllers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

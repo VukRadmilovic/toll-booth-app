@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NaplataPutarine.GUI.TollStationChief.Controllers
+namespace NaplataPutarine.Core.TollStations
 {
     internal class EarningsReportController
     {
@@ -19,7 +19,7 @@ namespace NaplataPutarine.GUI.TollStationChief.Controllers
 
         public string GetReport(NaplatnaStanica station, string reportType, DateOnly start)
         {
-            return _system.GenerisiIzvestajZaStanicu(station,reportType,start);
+            return _system.GenerisiIzvestajZaStanicu(station, reportType, start);
         }
     }
 }

@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.uredjajiButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // uredjajiButton
+            // 
+            this.uredjajiButton.Location = new System.Drawing.Point(12, 12);
+            this.uredjajiButton.Name = "uredjajiButton";
+            this.uredjajiButton.Size = new System.Drawing.Size(326, 224);
+            this.uredjajiButton.TabIndex = 0;
+            this.uredjajiButton.Text = "Pregled uređaja";
+            this.uredjajiButton.UseVisualStyleBackColor = true;
+            this.uredjajiButton.Click += new System.EventHandler(this.UredjajiButton_Click);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 302);
+            this.ClientSize = new System.Drawing.Size(350, 248);
+            this.Controls.Add(this.uredjajiButton);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
-            this.Text = "Main";
+            this.Text = "Radnik";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Button uredjajiButton;
     }
 }

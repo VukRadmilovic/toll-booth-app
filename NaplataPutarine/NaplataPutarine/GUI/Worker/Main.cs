@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NaplataPutarine.Core.Users.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,19 @@ using System.Windows.Forms;
 
 namespace NaplataPutarine.GUI.Worker
 {
-    public partial class Main : Form
+    internal partial class Main : Form
     {
-        public Main()
+        private readonly Radnik _radnik;
+
+        public Main(Radnik radnik)
         {
             InitializeComponent();
+            _radnik = radnik;
+        }
+
+        private void UredjajiButton_Click(object sender, EventArgs e)
+        {
+            new Uredjaji(_radnik.MestoRada).Show();
         }
     }
 }

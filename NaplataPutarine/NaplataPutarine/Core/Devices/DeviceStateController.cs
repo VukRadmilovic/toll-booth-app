@@ -1,5 +1,4 @@
 ﻿using NaplataPutarine.Core;
-using NaplataPutarine.Core.Devices;
 using NaplataPutarine.Core.Devices.Models;
 using NaplataPutarine.Core.Devices.Observer;
 using NaplataPutarine.Core.TollStations.Models;
@@ -9,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NaplataPutarine.GUI.TollStationChief.Controllers
+namespace NaplataPutarine.Core.Devices
 {
     internal class DeviceStateController
     {

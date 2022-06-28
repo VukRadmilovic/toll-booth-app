@@ -1,8 +1,8 @@
-﻿using NaplataPutarine.Core.Devices.Models;
+﻿using NaplataPutarine.Core.Devices;
+using NaplataPutarine.Core.Devices.Models;
 using NaplataPutarine.Core.Devices.Observer;
 using NaplataPutarine.Core.TollStations.Models;
 using NaplataPutarine.Core.Utilities;
-using NaplataPutarine.GUI.TollStationChief.Controllers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

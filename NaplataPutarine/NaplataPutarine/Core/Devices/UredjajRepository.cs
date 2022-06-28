@@ -56,7 +56,7 @@ namespace NaplataPutarine.Core.Devices
         {
             string changeQuery = "UPDATE [Uredjaj] SET Ispravan = @status " +
                                  "WHERE Id = @id";
-            database.ExecuteNonQueryCommand(changeQuery, ("@id",deviceId), ("@status",deviceId));
+            database.ExecuteNonQueryCommand(changeQuery, ("@id", deviceId), ("@status", status));
         }
     }
 }

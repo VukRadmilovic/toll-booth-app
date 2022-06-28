@@ -39,41 +39,44 @@
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(28, 19);
+            this.emailLabel.Location = new System.Drawing.Point(24, 14);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(107, 20);
+            this.emailLabel.Size = new System.Drawing.Size(87, 15);
             this.emailLabel.TabIndex = 0;
             this.emailLabel.Text = "korisničko ime:";
             // 
             // usernameField
             // 
-            this.usernameField.Location = new System.Drawing.Point(141, 16);
+            this.usernameField.Location = new System.Drawing.Point(123, 12);
+            this.usernameField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usernameField.Name = "usernameField";
-            this.usernameField.Size = new System.Drawing.Size(188, 27);
+            this.usernameField.Size = new System.Drawing.Size(165, 23);
             this.usernameField.TabIndex = 1;
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(28, 52);
+            this.passwordLabel.Location = new System.Drawing.Point(24, 39);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(59, 20);
+            this.passwordLabel.Size = new System.Drawing.Size(47, 15);
             this.passwordLabel.TabIndex = 2;
             this.passwordLabel.Text = "lozinka:";
             // 
             // passwordField
             // 
-            this.passwordField.Location = new System.Drawing.Point(141, 49);
+            this.passwordField.Location = new System.Drawing.Point(123, 37);
+            this.passwordField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordField.Name = "passwordField";
             this.passwordField.PasswordChar = '*';
-            this.passwordField.Size = new System.Drawing.Size(188, 27);
+            this.passwordField.Size = new System.Drawing.Size(165, 23);
             this.passwordField.TabIndex = 3;
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(128, 99);
+            this.loginButton.Location = new System.Drawing.Point(123, 74);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(94, 29);
+            this.loginButton.Size = new System.Drawing.Size(82, 30);
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Prijava";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -82,22 +85,23 @@
             // errorLbl
             // 
             this.errorLbl.AutoSize = true;
-            this.errorLbl.Location = new System.Drawing.Point(123, 92);
+            this.errorLbl.Location = new System.Drawing.Point(108, 69);
             this.errorLbl.Name = "errorLbl";
-            this.errorLbl.Size = new System.Drawing.Size(0, 20);
+            this.errorLbl.Size = new System.Drawing.Size(0, 15);
             this.errorLbl.TabIndex = 5;
             // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 153);
+            this.ClientSize = new System.Drawing.Size(318, 115);
             this.Controls.Add(this.errorLbl);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordField);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameField);
             this.Controls.Add(this.emailLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";

@@ -47,7 +47,7 @@ namespace NaplataPutarine.Core.Devices
                 if (device.Id != deviceId) continue;
 
                 device.Ispravan = status;
-                _uredjajRepo.ChangeDeviceStatus(deviceId,status);
+                _uredjajRepo.ChangeDeviceStatus(deviceId, status);
                 NotifyObservers(device);
                 return;
             }
