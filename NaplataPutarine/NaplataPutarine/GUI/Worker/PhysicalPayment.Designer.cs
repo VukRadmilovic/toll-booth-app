@@ -28,50 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.vremeBox = new System.Windows.Forms.TextBox();
+            this.mestoBox = new System.Windows.Forms.TextBox();
+            this.kursBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.catCombo = new System.Windows.Forms.ComboBox();
+            this.kursButton = new System.Windows.Forms.Button();
+            this.speedButton = new System.Windows.Forms.Button();
+            this.brLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.uredjajLabel = new System.Windows.Forms.Label();
+            this.rampLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.speedBox = new System.Windows.Forms.TextBox();
+            this.nextButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // vremeBox
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(191, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 27);
-            this.textBox1.TabIndex = 0;
+            this.vremeBox.Enabled = false;
+            this.vremeBox.Location = new System.Drawing.Point(191, 26);
+            this.vremeBox.Name = "vremeBox";
+            this.vremeBox.Size = new System.Drawing.Size(151, 27);
+            this.vremeBox.TabIndex = 0;
             // 
-            // textBox2
+            // mestoBox
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(191, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 27);
-            this.textBox2.TabIndex = 1;
+            this.mestoBox.Enabled = false;
+            this.mestoBox.Location = new System.Drawing.Point(191, 68);
+            this.mestoBox.Name = "mestoBox";
+            this.mestoBox.Size = new System.Drawing.Size(151, 27);
+            this.mestoBox.TabIndex = 1;
             // 
-            // textBox4
+            // kursBox
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(191, 199);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 27);
-            this.textBox4.TabIndex = 3;
+            this.kursBox.Enabled = false;
+            this.kursBox.Location = new System.Drawing.Point(191, 199);
+            this.kursBox.Name = "kursBox";
+            this.kursBox.Size = new System.Drawing.Size(151, 27);
+            this.kursBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -87,9 +86,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(16, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 20);
+            this.label2.Size = new System.Drawing.Size(164, 20);
             this.label2.TabIndex = 5;
-            this.label2.Text = "ID mesta ulaska vozila";
+            this.label2.Text = "ID Stanice ulaska vozila";
             // 
             // label3
             // 
@@ -100,46 +99,48 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Kategorija vozila";
             // 
-            // comboBox1
+            // catCombo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(191, 113);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 7;
+            this.catCombo.FormattingEnabled = true;
+            this.catCombo.Location = new System.Drawing.Point(191, 113);
+            this.catCombo.Name = "catCombo";
+            this.catCombo.Size = new System.Drawing.Size(151, 28);
+            this.catCombo.TabIndex = 7;
             // 
-            // button1
+            // kursButton
             // 
-            this.button1.Location = new System.Drawing.Point(34, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 78);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Racunanje kursa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.kursButton.Location = new System.Drawing.Point(34, 331);
+            this.kursButton.Name = "kursButton";
+            this.kursButton.Size = new System.Drawing.Size(138, 78);
+            this.kursButton.TabIndex = 8;
+            this.kursButton.Text = "Racunanje kursa";
+            this.kursButton.UseVisualStyleBackColor = true;
+            this.kursButton.Click += new System.EventHandler(this.kursButton_Click);
             // 
-            // button2
+            // speedButton
             // 
-            this.button2.Location = new System.Drawing.Point(229, 331);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 78);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Provera prosecne brzine";
-            this.button2.UseVisualStyleBackColor = true;
+            this.speedButton.Location = new System.Drawing.Point(229, 331);
+            this.speedButton.Name = "speedButton";
+            this.speedButton.Size = new System.Drawing.Size(138, 78);
+            this.speedButton.TabIndex = 9;
+            this.speedButton.Text = "Provera prosecne brzine";
+            this.speedButton.UseVisualStyleBackColor = true;
+            this.speedButton.Click += new System.EventHandler(this.speedButton_Click);
             // 
-            // label4
+            // brLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Broj tablice: ";
+            this.brLabel.AutoSize = true;
+            this.brLabel.Location = new System.Drawing.Point(11, 42);
+            this.brLabel.Name = "brLabel";
+            this.brLabel.Size = new System.Drawing.Size(92, 20);
+            this.brLabel.TabIndex = 10;
+            this.brLabel.Text = "Broj tablice: ";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.uredjajLabel);
+            this.groupBox1.Controls.Add(this.rampLabel);
+            this.groupBox1.Controls.Add(this.brLabel);
             this.groupBox1.Location = new System.Drawing.Point(447, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(300, 168);
@@ -147,23 +148,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Indikatori";
             // 
-            // label5
+            // uredjajLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Status rampe: ";
+            this.uredjajLabel.AutoSize = true;
+            this.uredjajLabel.Location = new System.Drawing.Point(11, 126);
+            this.uredjajLabel.Name = "uredjajLabel";
+            this.uredjajLabel.Size = new System.Drawing.Size(141, 20);
+            this.uredjajLabel.TabIndex = 12;
+            this.uredjajLabel.Text = "Ispravnost uredjaja: ";
             // 
-            // label6
+            // rampLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Ispravnost uredjaja: ";
+            this.rampLabel.AutoSize = true;
+            this.rampLabel.Location = new System.Drawing.Point(11, 87);
+            this.rampLabel.Name = "rampLabel";
+            this.rampLabel.Size = new System.Drawing.Size(103, 20);
+            this.rampLabel.TabIndex = 11;
+            this.rampLabel.Text = "Status rampe: ";
             // 
             // label7
             // 
@@ -183,54 +184,46 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Prosecna brzina";
             // 
-            // textBox3
+            // speedBox
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(191, 242);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 27);
-            this.textBox3.TabIndex = 13;
+            this.speedBox.Enabled = false;
+            this.speedBox.Location = new System.Drawing.Point(191, 242);
+            this.speedBox.Name = "speedBox";
+            this.speedBox.Size = new System.Drawing.Size(151, 27);
+            this.speedBox.TabIndex = 13;
             // 
-            // button3
+            // nextButton
             // 
-            this.button3.Location = new System.Drawing.Point(412, 331);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 78);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Placanje";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(592, 331);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 78);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Sledeci";
-            this.button4.UseVisualStyleBackColor = true;
+            this.nextButton.Location = new System.Drawing.Point(423, 331);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(138, 78);
+            this.nextButton.TabIndex = 16;
+            this.nextButton.Text = "Sledeci";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.button4_Click);
             // 
             // PhysicalPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.nextButton);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.speedBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.speedButton);
+            this.Controls.Add(this.kursButton);
+            this.Controls.Add(this.catCombo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.kursBox);
+            this.Controls.Add(this.mestoBox);
+            this.Controls.Add(this.vremeBox);
             this.Name = "PhysicalPayment";
             this.Text = "PhysicalPayment";
+            this.Load += new System.EventHandler(this.PhysicalPayment_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -240,23 +233,22 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox4;
+        private TextBox vremeBox;
+        private TextBox mestoBox;
+        private TextBox kursBox;
         private Label label1;
         private Label label2;
         private Label label3;
-        private ComboBox comboBox1;
-        private Button button1;
-        private Button button2;
-        private Label label4;
+        private ComboBox catCombo;
+        private Button kursButton;
+        private Button speedButton;
+        private Label brLabel;
         private GroupBox groupBox1;
-        private Label label6;
-        private Label label5;
+        private Label uredjajLabel;
+        private Label rampLabel;
         private Label label7;
         private Label label8;
-        private TextBox textBox3;
-        private Button button3;
-        private Button button4;
+        private TextBox speedBox;
+        private Button nextButton;
     }
 }

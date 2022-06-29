@@ -24,7 +24,7 @@ namespace NaplataPutarine.Core
         public List<NaplatnaStanica> NaplatneStanice { get; private set; }
         public List<Deonica> Deonice { get; private set; }
         public Cenovnik Cenovnik { get; private set; }
-        public List<Kartica> Kartice { get; private set; }
+        public List<NaplataPutarine.Core.TollStations.Models.Kartica> Kartice { get; private set; }
 
         private readonly KorisnikRepository _korisnikRepo;
         private readonly NaplatnaStanicaRepository _stanicaRepo;

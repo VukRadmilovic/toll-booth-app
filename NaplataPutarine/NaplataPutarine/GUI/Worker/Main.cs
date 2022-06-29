@@ -28,7 +28,7 @@ namespace NaplataPutarine.GUI.Worker
 
         private void paymentButton_Click(object sender, EventArgs e)
         {
-            new PhysicalPayment().Show();
+            new PhysicalPayment(_radnik.MestoRada).Show();
         }
     }
 }

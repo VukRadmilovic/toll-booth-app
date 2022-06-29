@@ -20,5 +20,7 @@ namespace NaplataPutarine.Core.Prices
         {
             return pricelistService.GetPricelist();
         }
+
+        
     }
 }

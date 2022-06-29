@@ -18,7 +18,7 @@ namespace NaplataPutarine.Core.Login
                 case UlogaEnum.Uloga.SEF_STANICE:
                     new GUI.TollStationChief.Main(logged).Show(); break;
                 case UlogaEnum.Uloga.MENADZER:
-                    new GUI.GeneralManager.Main().Show(); break;
+                    new GUI.GeneralManager.Main(logged).Show(); break;
                 case UlogaEnum.Uloga.RADNIK_MESTA:
                     new GUI.Worker.Main(logged).Show(); break;
             }

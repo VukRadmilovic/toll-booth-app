@@ -26,7 +26,6 @@ namespace NaplataPutarine.Core.Prices
                 {
                     cenovnik.Add(temp);
                 }
-                //MessageBox.Show(Convert.ToInt32(row["DatumKreiranja"].ToString().Split('/')[2].Split()[0]) + " " + Convert.ToInt32(row["DatumKreiranja"].ToString().Split('/')[1]) + " " + Convert.ToInt32(row["DatumKreiranja"].ToString().Split('/')[0]));
             }
             return cenovnik;
         }

@@ -9,13 +9,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NaplataPutarine.Core.Users.Models;
 
 namespace NaplataPutarine.GUI.GeneralManager
 {
-    public partial class Main : Form
+    internal partial class Main : Form
     {
-        public Main()
+        private Radnik _logged;
+        public Main(Radnik  logged)
         {
+            _logged = logged;
             InitializeComponent();
         }
 
