@@ -107,6 +107,10 @@ namespace NaplataPutarine.Core.TollStations.Repositories
                                 "SET isDeleted = 1 " +
                                 "WHERE Id = @id";
                 database.ExecuteNonQueryCommand(query, ("@id", id));
+                string mestaQuery = "UPDATE [NaplatnoMesto] " +
+                                    "SET isDeleted = 1 " +
+                                    "WHERE IdNaplatnaStanica = @id";
+                database.ExecuteNonQueryCommand(mestaQuery, ("@id", id));
                 string radnikQuery = "DELETE FROM [Radnik] " +
                                         "WHERE IdNaplatnaStanica = @id";
                 database.ExecuteNonQueryCommand(radnikQuery, ("@id", id));
