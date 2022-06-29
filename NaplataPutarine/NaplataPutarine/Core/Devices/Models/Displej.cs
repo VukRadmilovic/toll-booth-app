@@ -15,6 +15,11 @@ namespace NaplataPutarine.Core.Devices.Models
 
         }
 
+        public Displej() : base()
+        {
+
+        }
+
         public void PrikaziCenu(Cena cena)
         {
 

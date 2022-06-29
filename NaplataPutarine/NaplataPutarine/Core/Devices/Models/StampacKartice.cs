@@ -14,6 +14,11 @@ namespace NaplataPutarine.Core.Devices.Models
 
         }
 
+        public StampacKartice() : base()
+        {
+
+        }
+
         public void OdstampajKarticu()
         {
 

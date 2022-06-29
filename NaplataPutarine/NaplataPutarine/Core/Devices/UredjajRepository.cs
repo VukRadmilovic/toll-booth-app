@@ -1,16 +1,27 @@
 ﻿using NaplataPutarine.Core.Devices.Models;
 using NaplataPutarine.Core.TollStations.Models;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NaplataPutarine.Core.Devices
 {
     internal class UredjajRepository : Repository
     {
+        private readonly Dictionary<string, int> _vrstaUredjajaToIDTipa;
+
+        public UredjajRepository()
+        {
+            _vrstaUredjajaToIDTipa = new Dictionary<string, int>()
+            {
+                { "CitacRegistarskihTablica", 7 },
+                { "CitacTaga", 2 },
+                { "Displej", 1 },
+                { "Rampa", 4 },
+                { "Semafor", 3 },
+                { "SkenerKartice", 5 },
+                { "StampacKartice", 6 }
+            };
+        }
+
         public List<Uredjaj> GetAllDevices()
         {
             List<Uredjaj> devices = new List<Uredjaj>();
@@ -56,6 +67,33 @@ namespace NaplataPutarine.Core.Devices
             string changeQuery = "UPDATE [Uredjaj] SET Ispravan = @status " +
                                  "WHERE Id = @id";
             database.ExecuteNonQueryCommand(changeQuery, ("@id", deviceId), ("@status", status));
+        }
+
+        public void Add(int mestoID, List<Uredjaj> uredjaji)
+        {
+            foreach (Uredjaj uredjaj in uredjaji)
+            {
+                string uredjajQuery = "INSERT INTO [Uredjaj] " +
+                                        "(IdNaplatnoMesto, IdTipUredjaja, Ispravan, IsDeleted) " +
+                                        "values(@idMesto, @idTip, 1, 0)";
+                database.ExecuteNonQueryCommand(uredjajQuery, ("@idMesto", mestoID),
+                                               ("@idTip", _vrstaUredjajaToIDTipa[uredjaj.GetType().ToString().Split(".").Last()]));
+            }
+        }
+
+        public void Delete(int id)
+        {
+            try
+            {
+                string query = "UPDATE [Uredjaj] " +
+                                "SET isDeleted = 1 " +
+                                "WHERE Id = @id";
+                database.ExecuteNonQueryCommand(query, ("@id", id));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

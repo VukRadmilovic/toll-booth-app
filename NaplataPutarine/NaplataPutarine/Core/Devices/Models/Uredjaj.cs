@@ -21,5 +21,9 @@ namespace NaplataPutarine.Core.Devices.Models
             NaplatnoMestoUredjaja = mesto;
         }
 
+        protected Uredjaj()
+        {
+
+        }
     }
 }

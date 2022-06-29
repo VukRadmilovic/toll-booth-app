@@ -14,6 +14,11 @@ namespace NaplataPutarine.Core.Devices.Models
 
         }
 
+        public Rampa() : base()
+        {
+
+        }
+
         public void PodigniRampu()
         {
 

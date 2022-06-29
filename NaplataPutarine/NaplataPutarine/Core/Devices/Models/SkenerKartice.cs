@@ -14,6 +14,11 @@ namespace NaplataPutarine.Core.Devices.Models
             //TODO: ucitati listu izdatih kartica 
         }
 
+        public SkenerKartice() : base()
+        {
+
+        }
+
         public List<Kartica> Kartice { get; private set; }
 
         public Kartica SkenirajKarticu()

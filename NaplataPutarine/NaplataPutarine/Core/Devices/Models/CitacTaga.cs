@@ -12,6 +12,12 @@ namespace NaplataPutarine.Core.Devices.Models
     {
         public CitacTaga(int id, bool ispravan, NaplatnoMesto mesto) : base(id, ispravan, mesto)
         {
+
+        }
+
+        public CitacTaga() : base()
+        {
+
         }
 
         public List<Tag> Tagovi { get; private set; }

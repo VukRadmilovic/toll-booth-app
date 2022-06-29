@@ -196,6 +196,7 @@
             this.Controls.Add(this.nazivTextBox);
             this.Controls.Add(this.label2);
             this.Name = "NaplatnaStanicaCRUD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Naplatne stanice";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NaplatnaStanicaCRUD_FormClosed);
             this.Load += new System.EventHandler(this.NaplatnaStanicaCRUD_Load);

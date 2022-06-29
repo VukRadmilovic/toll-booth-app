@@ -114,9 +114,18 @@ namespace NaplataPutarine.GUI.Administrator
                 MessageBoxUtilities.ShowErrorMessage("Morate odabrati stanicu iz tabele za pregled njenih naplatnih mesta.");
                 return;
             }
-            int id = Convert.ToInt32(UIUtilities.GetCellValue(staniceTable, "id"));
+            int id;
+            try
+            {
+                id = Convert.ToInt32(UIUtilities.GetCellValue(staniceTable, "id"));
+            }
+            catch (Exception)
+            {
+                MessageBoxUtilities.ShowErrorMessage("Morate odabrati stanicu iz tabele za pregled njenih naplatnih mesta.");
+                return;
+            }
 
-
+            new NaplatnoMestoCRUD(id).ShowDialog();
         }
     }
 }

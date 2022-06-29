@@ -14,6 +14,11 @@ namespace NaplataPutarine.Core.Devices.Models
 
         }
 
+        public Semafor() : base()
+        {
+
+        }
+
         public void UpaliCrveno()
         {
 

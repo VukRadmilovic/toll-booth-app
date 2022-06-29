@@ -13,6 +13,11 @@ namespace NaplataPutarine.Core.Devices.Models
         {
 
         }
+        
+        public CitacRegistarskihTablica() : base()
+        {
+
+        }
 
         public void OcitajTablicu()
         {
