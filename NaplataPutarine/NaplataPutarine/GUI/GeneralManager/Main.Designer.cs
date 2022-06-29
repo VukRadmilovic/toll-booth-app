@@ -30,11 +30,12 @@
         {
             this.earningsReportButton = new System.Windows.Forms.Button();
             this.personalInfoButton = new System.Windows.Forms.Button();
+            this.pricelistCheckButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // earningsReportButton
             // 
-            this.earningsReportButton.Location = new System.Drawing.Point(28, 51);
+            this.earningsReportButton.Location = new System.Drawing.Point(25, 72);
             this.earningsReportButton.Name = "earningsReportButton";
             this.earningsReportButton.Size = new System.Drawing.Size(249, 29);
             this.earningsReportButton.TabIndex = 0;
@@ -44,18 +45,29 @@
             // 
             // personalInfoButton
             // 
-            this.personalInfoButton.Location = new System.Drawing.Point(28, 105);
+            this.personalInfoButton.Location = new System.Drawing.Point(25, 126);
             this.personalInfoButton.Name = "personalInfoButton";
             this.personalInfoButton.Size = new System.Drawing.Size(249, 29);
             this.personalInfoButton.TabIndex = 1;
             this.personalInfoButton.Text = "Lični podaci";
             this.personalInfoButton.UseVisualStyleBackColor = true;
             // 
+            // pricelistCheckButton
+            // 
+            this.pricelistCheckButton.Location = new System.Drawing.Point(25, 21);
+            this.pricelistCheckButton.Name = "pricelistCheckButton";
+            this.pricelistCheckButton.Size = new System.Drawing.Size(249, 29);
+            this.pricelistCheckButton.TabIndex = 2;
+            this.pricelistCheckButton.Text = "Pregled aktivnog cenovnika";
+            this.pricelistCheckButton.UseVisualStyleBackColor = true;
+            this.pricelistCheckButton.Click += new System.EventHandler(this.pricelistCheckButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 192);
+            this.Controls.Add(this.pricelistCheckButton);
             this.Controls.Add(this.personalInfoButton);
             this.Controls.Add(this.earningsReportButton);
             this.Name = "Main";
@@ -69,5 +81,6 @@
 
         private Button earningsReportButton;
         private Button personalInfoButton;
+        private Button pricelistCheckButton;
     }
 }

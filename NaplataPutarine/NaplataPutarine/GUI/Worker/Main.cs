@@ -25,5 +25,10 @@ namespace NaplataPutarine.GUI.Worker
         {
             new Uredjaji(_radnik.MestoRada).Show();
         }
+
+        private void paymentButton_Click(object sender, EventArgs e)
+        {
+            new PhysicalPayment().Show();
+        }
     }
 }

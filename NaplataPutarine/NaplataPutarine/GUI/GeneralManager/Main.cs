@@ -29,5 +29,10 @@ namespace NaplataPutarine.GUI.GeneralManager
             Hide();
             new LoginPage().Show();
         }
+
+        private void pricelistCheckButton_Click(object sender, EventArgs e)
+        {
+            new PricelistCheck().Show();
+        }
     }
 }
