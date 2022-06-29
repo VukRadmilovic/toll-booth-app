@@ -30,12 +30,12 @@ namespace NaplataPutarine.GUI.TollStationChief.Forms
         public void Update(Uredjaj device)
         {
             deviceStatusTable.SelectedRows[0].Cells["Ispravan"].Value = device.Ispravan;
-            MessageBoxUtilities.ShowSuccessMessage("Uređaj uspešno popravljen!");
         }
 
         private void FixButton_Click(object sender, EventArgs e)
         {
             _deviceController.ChangeDeviceStatus(_current, Convert.ToInt32(UIUtilities.GetCellValue(deviceStatusTable, "Id")), true);
+            MessageBoxUtilities.ShowSuccessMessage("Uređaj uspešno popravljen!");
             fixButton.Enabled = false;
         }
 
