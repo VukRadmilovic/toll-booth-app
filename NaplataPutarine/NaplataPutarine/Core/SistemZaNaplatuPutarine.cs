@@ -1,17 +1,11 @@
-﻿using NaplataPutarine.Core.Devices;
-using NaplataPutarine.Core.Payments.Models;
+﻿using NaplataPutarine.Core.Payments.Models;
 using NaplataPutarine.Core.Payments.Repositories;
 using NaplataPutarine.Core.Prices.Models;
 using NaplataPutarine.Core.TollStations.Models;
 using NaplataPutarine.Core.TollStations.Repositories;
 using NaplataPutarine.Core.Users;
 using NaplataPutarine.Core.Users.Models;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NaplataPutarine.Core
 {
@@ -119,16 +113,16 @@ namespace NaplataPutarine.Core
             return GenerisiIzvestajZaStanicu(null,reportType,start);
         }
 
-        public NaplatnaStanica RegistrujNaplatnuStanicu()
+        public void Refresh()
         {
-            throw new NotImplementedException();
+            Radnici = _korisnikRepo.GetAllWorkers();
+            NaplatneStanice = _stanicaRepo.GetAllTollStations();
+            Uplate = _uplataRepo.GetAllPayments();
         }
 
         public Deonica GetDeonica(NaplatnaStanica start, NaplatnaStanica kraj)
         {
             throw new NotImplementedException();
         }
-
-
     }
 }

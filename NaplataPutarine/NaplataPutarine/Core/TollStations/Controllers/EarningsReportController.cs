@@ -1,12 +1,11 @@
-﻿using NaplataPutarine.Core;
-using NaplataPutarine.Core.TollStations.Models;
+﻿using NaplataPutarine.Core.TollStations.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NaplataPutarine.Core.TollStations
+namespace NaplataPutarine.Core.TollStations.Controllers
 {
     internal class EarningsReportController
     {

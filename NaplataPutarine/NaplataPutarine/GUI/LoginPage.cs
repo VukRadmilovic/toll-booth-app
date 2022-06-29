@@ -21,8 +21,8 @@ namespace NaplataPutarine.Login
         {
             try
             {
-                _loginController.Login(email, password);
                 Hide();
+                _loginController.Login(email, password);
             }
             catch (DatabaseConnectionException error)
             {
@@ -32,6 +32,7 @@ namespace NaplataPutarine.Login
             {
                 MessageBox.Show(error.Message);
             }
+            Show();
         }
 
     }

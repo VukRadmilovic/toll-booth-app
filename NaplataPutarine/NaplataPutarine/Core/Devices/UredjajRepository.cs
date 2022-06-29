@@ -51,7 +51,6 @@ namespace NaplataPutarine.Core.Devices
             return devices;
         }
 
-
         public void ChangeDeviceStatus(int deviceId, bool status)
         {
             string changeQuery = "UPDATE [Uredjaj] SET Ispravan = @status " +

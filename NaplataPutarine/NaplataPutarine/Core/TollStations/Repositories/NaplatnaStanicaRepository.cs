@@ -1,12 +1,7 @@
 ﻿using NaplataPutarine.Core.TollStations.Models;
 using NaplataPutarine.Core.Users;
 using NaplataPutarine.Core.Users.Models;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NaplataPutarine.Core.TollStations.Repositories
 {
@@ -35,7 +30,12 @@ namespace NaplataPutarine.Core.TollStations.Repositories
                 List<Radnik> tollStationWorkers = new List<Radnik>();
                 Radnik boss = null;
                 int tollStationId = Convert.ToInt32(row["Id"]);
-                int tollStationBossId = Convert.ToInt32(row["IdSef"]);
+                int tollStationBossId = -1;
+
+                if (row["IdSef"] is not DBNull)
+                {
+                    tollStationBossId = Convert.ToInt32(row["IdSef"]);
+                }
 
                 foreach (NaplatnoMesto tollBooth in allTollBooths)
                 {
@@ -67,6 +67,54 @@ namespace NaplataPutarine.Core.TollStations.Repositories
                                                      ));
             }
             return tollStations;
+        }
+
+        public void Add(string naziv, string mesto, DateTime izgradnja)
+        {
+            try
+            {
+                string query = "INSERT INTO [NaplatnaStanica] " +
+                                    "(naziv, mesto, datumIzgradnje, isDeleted) " +
+                                    "values(@naziv, @mesto, @datum, 0)";
+                database.ExecuteNonQueryCommand(query, ("@naziv", naziv), ("@mesto", mesto), ("@datum", izgradnja));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void Update(int id, string naziv, string mesto, DateTime izgradnja)
+        {
+            try
+            {
+                string query = "UPDATE [NaplatnaStanica] " +
+                                "SET naziv = @naziv, mesto = @mesto, datumIzgradnje = @datum " +
+                                 "WHERE Id = @id";
+                database.ExecuteNonQueryCommand(query, ("@id", id), ("@naziv", naziv), ("@mesto", mesto), ("@datum", izgradnja));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void Delete(int id)
+        {
+            try
+            {
+                string query = "UPDATE [NaplatnaStanica] " +
+                                "SET isDeleted = 1 " +
+                                "WHERE Id = @id";
+                database.ExecuteNonQueryCommand(query, ("@id", id));
+                string radnikQuery = "DELETE FROM [Radnik] " +
+                                        "WHERE IdNaplatnaStanica = @id";
+                database.ExecuteNonQueryCommand(radnikQuery, ("@id", id));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

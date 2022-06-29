@@ -1,5 +1,5 @@
 ﻿using NaplataPutarine.Core;
-using NaplataPutarine.Core.TollStations;
+using NaplataPutarine.Core.TollStations.Controllers;
 using NaplataPutarine.Core.TollStations.Models;
 using System;
 using System.Collections.Generic;
