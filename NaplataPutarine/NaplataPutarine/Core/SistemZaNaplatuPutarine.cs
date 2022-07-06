@@ -68,22 +68,38 @@ namespace NaplataPutarine.Core
             foreach(Uplata payment in Uplate)
             {
                 if (payment.DatumUplate < start || payment.DatumUplate > end) continue;
-                if(payment is GotovinskaUplata)
+                if (station == null)
                 {
-                    cashCount++;
+                    if (payment is GotovinskaUplata)
+                    {
+                        cashCount++;
+                    }
+                    else
+                    {
+                        electronicCount++;
+                    }
                 }
-                else
-                {
-                    electronicCount++;
-                }
-
-                foreach(NaplatnaStanica tollStation in NaplatneStanice)
+                foreach (NaplatnaStanica tollStation in NaplatneStanice)
                 {
                     if (station != null && tollStation.Id != station.Id) continue;
-                    foreach(NaplatnoMesto tollBooth in tollStation.NaplatnaMesta)
+
+
+                    foreach (NaplatnoMesto tollBooth in tollStation.NaplatnaMesta)
                     {
                         if (payment.MestoUplate.Id != tollBooth.Id) continue;
-                        switch(payment.Valuta)
+
+                        if (station != null)
+                        {
+                            if (payment is GotovinskaUplata)
+                            {
+                                cashCount++;
+                            }
+                            else
+                            {
+                                electronicCount++;
+                            }
+                        }
+                        switch (payment.Valuta)
                         {
                             case ValutaEnum.Valuta.RSD:
                                 rsd += payment.Iznos;break;
